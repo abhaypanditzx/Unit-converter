@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@500&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.heading {
+    font-family: 'Rubik', sans-serif;
+    font-size: 20px;
+}
+
+.font-rubik {
+    font-family: 'Rubik', sans-serif;
+}
+
+.light-red-gradient {
+    background: rgb(227,29,29);
+    background: linear-gradient(59deg, rgba(227,29,29,1) 0%, rgba(224,4,4,1) 100%);
+}
+
+.red-gradient {
+    background: rgb(212, 27, 27);
+    background: linear-gradient(43deg, rgba(212, 27, 27, 1) 0%, rgba(219, 17, 17, 1) 39%, rgb(161, 4, 4) 100%);
+}
