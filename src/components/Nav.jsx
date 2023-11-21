@@ -1,8 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { NavLinks } from "../constant";
 import { Link } from "react-router-dom";
-import { RxHamburgerMenu, RxCross1  } from "react-icons/rx";
-
+import { RxHamburgerMenu, RxCross1 } from "react-icons/rx";
 
 function Nav() {
   const [toggle, setToggle] = useState(false);
@@ -37,30 +36,35 @@ function Nav() {
           );
         })}
       </ul>
-      <div className="flex  sm:hidden absolute top-0 right-0 w-full  h-screen flex-col">
+      <div className={`flex  sm:hidden absolute top-0 right-0 w-full ${toggle ? 'h-screen ' : ' h-0 '} flex-col`}>
         <button
           className=" sm:hidden  absolute  right-3 z-50 top-3 flex text-3xl flex-1"
           onClick={() => {
             setToggle(!toggle);
           }}
         >
-          {toggle ? <RxCross1  /> : <RxHamburgerMenu />}
+          {toggle ? <RxCross1 /> : <RxHamburgerMenu />}
         </button>
 
         <ul
           className={`${
             !toggle ? "hidden" : "flex"
-          } py-10  absolute top-5   bg-white items-start  shadow-lg shadow-black/20 flex-col right-0  min-w-[90%] min-h-screen  z-10`}
+          } py-10  absolute top-0   bg-white items-start  shadow-lg shadow-black/20 flex-col right-0  min-w-[90%] min-h-screen  z-10`}
         >
           {NavLinks.map((e, index) => {
             return (
               <li
                 key={`e-${index}`}
-                onClick={()=>{
-                  handleLinkClick(e.link) ;
-                  setToggle(!toggle)}}
-                className={`${activeLink === e.link ? 'text-white bg-red-500' : 'text-black' } py-5 text-start w-full px-[40px] flex items-center space-x-4`}
-              > <div className="text-2xl">{e.icon}</div>
+                onClick={() => {
+                  handleLinkClick(e.link);
+                  setToggle(!toggle);
+                }}
+                className={`${
+                  activeLink === e.link ? "text-white bg-red-500" : "text-black"
+                } py-5 text-start w-full px-[40px] flex items-center space-x-4`}
+              >
+                {" "}
+                <div className="text-2xl">{e.icon}</div>
                 <Link to={e.link}>{e.title}</Link>
               </li>
             );

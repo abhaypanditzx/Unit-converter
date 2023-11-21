@@ -64,12 +64,12 @@ const Weight = () => {
   // Use handleWeightResult in your button's onClick event in your component.
 
   return (
-    <div className="min-w-[200px] lg:w-[800px] sm:w-[400px]  max-xs:w-[380px] h-[400px] bg-white shadow-lg shadow-black/20">
-      <div className="h-[50px] heading light-red-gradient flex text-white justify-around items-center capitalize w-full">
+<div className="min-w-[200px] lg:w-[800px] sm:w-[400px] max-[360px]:h-[400px] max-xs:w-[380px] h-[400px] max-[360px]:w-[340px] bg-white shadow-lg shadow-black/20">
+      <div className="h-[50px]  heading light-red-gradient flex text-white justify-around items-center  capitalize w-full">
         <div>from :</div>
         <div>to :</div>
       </div>
-      <div className="flex flex-col  items-center h-full  w-full justify-around p-10">
+      <div className="flex flex-col  items-center h-full  w-full justify-around max-xs:justify-center max-xs:space-y-[50px] p-10 max-[360px]:p-4">
         <div className="flex items-center max-xs:flex-col  max-xs:items-start  max-xs:space-y-4  w-full justify-around ">
           <input
             id="input"
