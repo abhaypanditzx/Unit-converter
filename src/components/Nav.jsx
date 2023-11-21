@@ -53,10 +53,10 @@ function Nav() {
         >
           {NavLinks.map((e, index) => {
             return (
-              <Link to={e.link} className="w-full">
+              <Link to={e.link}  key={`e-${index}`} className="w-full">
 
               <li
-                key={`e-${index}`}
+               
                 onClick={() => {
                   handleLinkClick(e.link);
                   setToggle(!toggle);

@@ -48,7 +48,7 @@ function Contact() {
       );
   };
   return (
-    <div className="min-h-screen sm:h-screen min-w-screen flex justify-center items-center bg-gray-100">
+    <div className="min-h-[84vh]  min-w-screen flex justify-center items-center bg-gray-100">
       <form
         ref={formRef}
         onSubmit={handleSubmit}
@@ -76,7 +76,7 @@ function Contact() {
             value={form.email}
             name="email"
             placeholder="what's your web address?"
-            className="sm:w-[90%] max-xs:h-[35px] sm:h-[50px] outline-none placeholder:px-4 rounded-md bg-gray-100"
+            className="sm:w-[90%] max-xs:h-[35px] max-xs:text-sm  sm:h-[50px] outline-none placeholder:px-4 rounded-md bg-gray-100"
           />
         </div>
         <div className="flex flex-col space-y-2">
@@ -86,13 +86,13 @@ function Contact() {
             onChange={handleChange}
             value={form.message}
             name="message"
-            className="sm:w-[90%] max-xs:h-[50px] sm:h-[70px] outline-none placeholder:py-6 placeholder:px-4 rounded-md bg-gray-100"
+            className="sm:w-[90%] max-xs:h-[50px] max-xs:text-sm sm:h-[70px] outline-none placeholder:py-6 placeholder:px-4 rounded-md bg-gray-100"
           />
         </div>
         <input
           type="submit"
           value={`${loading ? "sending..." : "send"}`}
-          className="bg-[#E53C38] sm:w-[150px] p-2 text-white rounded-xl m-auto max-xs:w-[100px]  sm:text-xl max-xs:text-base"
+          className="bg-[#E53C38] sm:w-[150px] p-2 max-xs:text-sm  cursor-pointer text-white rounded-xl m-auto max-xs:w-[100px]  sm:text-xl "
         />
       </form>
     </div>
