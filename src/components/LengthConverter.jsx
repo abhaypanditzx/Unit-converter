@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-
+import {Options} from "../constant"
 const ConverterBody = () => {
   const [inpVal, setInpVal] = useState("");
   const [output, setOutput] = useState("output");
@@ -79,10 +79,14 @@ const ConverterBody = () => {
             className="sm:w-[150px]  max-xs:w-[90px]  max-xs:text-sm lg:w-[300px] h-[40px] "
           >
             <optgroup label="Length">
-              <option value="kilometer">Kilometer</option>
-              <option value="meter">Meter</option>
-              <option value="inch">Inch</option>
-              <option value="centimeter">Centimeter</option>
+               {
+                Options.Length.map((e,index)=>{
+                  return(
+                    <option key={`length-A-${index}`} value={e.value}>{e.title
+                    }</option>
+                  )
+                })
+               }
             </optgroup>
           </select>
           <select
@@ -90,10 +94,14 @@ const ConverterBody = () => {
             className="sm:w-[150px]  max-xs:w-[90px]  max-xs:text-sm lg:w-[300px] h-[40px] "
           >
             <optgroup label="Length">
-              <option value="kilometer">Kilometer</option>
-              <option value="meter">Meter</option>
-              <option value="inch">Inch</option>
-              <option value="centimeter">Centimeter</option>
+            {
+                Options.Length.map((e,index)=>{
+                  return(
+                    <option key={`length-B-${index}`} value={e.value}>{e.title
+                    }</option>
+                  )
+                })
+               }
             </optgroup>
           </select>
         </div>

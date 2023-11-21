@@ -49,10 +49,12 @@ function Nav() {
         <ul
           className={`${
             !toggle ? "hidden" : "flex"
-          } py-10  absolute top-0   bg-white items-start  shadow-lg shadow-black/20 flex-col right-0  min-w-[90%] min-h-screen  z-10`}
+          } py-12  absolute top-0  bg-white items-start  shadow-lg shadow-black/20 flex-col right-0  min-w-[90%] min-h-screen  z-10`}
         >
           {NavLinks.map((e, index) => {
             return (
+              <Link to={e.link} className="w-full">
+
               <li
                 key={`e-${index}`}
                 onClick={() => {
@@ -65,8 +67,10 @@ function Nav() {
               >
                 {" "}
                 <div className="text-2xl">{e.icon}</div>
-                <Link to={e.link}>{e.title}</Link>
+      
+                <span>{e.title}</span>
               </li>
+              </Link>
             );
           })}
         </ul>
